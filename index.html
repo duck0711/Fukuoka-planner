@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Trip to Fukuoka 2026</title>
+    <title>Family Trip to Fukuoka 2026</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,12 +14,12 @@
             theme: {
                 extend: {
                     colors: {
-                        'snow-white': '#F0FFFF', // 雪白色/極淺藍
-                        'ice-blue': '#B3E5FC', // 冰川藍
-                        'light-snow-blue': '#E5F3F7', // 整個頁面柔和淺藍底色
-                        'deep-sea-blue': '#01579B', // 深海藍 (文字/強調)
-                        'accent-yellow': '#FFD54F', // 溫暖黃 (按鈕/點綴)
-                        'soft-gray': '#F5F5F5' // 背景灰
+                        'snow-white': '#F0FFFF',
+                        'ice-blue': '#B3E5FC',
+                        'light-snow-blue': '#E5F3F7',
+                        'deep-sea-blue': '#01579B',
+                        'accent-yellow': '#FFD54F',
+                        'soft-gray': '#F5F5F5'
                     }
                 }
             }
@@ -53,8 +53,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
             border-bottom-left-radius: 35px; 
             border-bottom-right-radius: 35px;
-            z-index: 10; 
-            padding-bottom: 0px; 
+            z-index: 10;
         }
 
         .side-tab-bar {
@@ -96,146 +95,6 @@
             position: relative;
             z-index: 5;
         }
-
-       
-
-        /* 隱藏捲軸但保持滑動功能 */
-
-        .hide-scrollbar::-webkit-scrollbar {
-
-            display: none;
-
-        }
-
-        .hide-scrollbar {
-
-            -ms-overflow-style: none;
-
-            scrollbar-width: none; 
-
-        }
-
-
-
-        /* 卡片柔和陰影 */
-
-        .card-shadow {
-
-            box-shadow: 0 4px 20px rgba(179, 229, 252, 0.3);
-
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-        }
-
-
-
-        /* 頁面淡入動畫 */
-
-        .animate-fade-in {
-
-            animation: fadeIn 0.4s ease-out;
-
-        }
-
-
-
-        @keyframes fadeIn {
-
-            from { opacity: 0; transform: translateY(10px); }
-
-            to { opacity: 1; transform: translateY(0); }
-
-        }
-
-
-
-        /* 自定義浮動按鈕陰影 */
-
-        .fab-shadow {
-
-            box-shadow: 0 4px 15px rgba(255, 213, 79, 0.5);
-
-        }
-
-
-
-        /* 備註內容高度控制 */
-
-        .note-content {
-
-            max-height: 2.5rem;
-
-            overflow: hidden;
-
-            transition: max-height 0.3s ease-out;
-
-        }
-
-
-
-        .note-content.expanded {
-
-            max-height: 500px;
-
-        }
-
-        
-
-        /* 支出圓形分類標籤 */
-
-        .expense-category-tag {
-
-            min-width: 50px;
-
-            height: 50px;
-
-            border-radius: 50%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            font-size: 10px;
-
-            font-weight: bold;
-
-            flex-shrink: 0;
-
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-        }
-
-
-
-        /* 花費頁 Banner 顏色調整 */
-
-        .expenses-banner {
-
-            background: linear-gradient(135deg, #01579B 0%, #0097A7 100%);
-
-        }
-
-        
-
-        /* 日期選單置頂的背景 */
-
-        .date-selector-sticky {
-
-             /* 讓日期選單置頂在 Banner 下方，並給予白色背景 */
-
-            background-color: #ffffff;
-
-            border-bottom: 1px solid #f0f0f0; 
-
-            z-index: 20; 
-
-            top: 0; 
-
-        }
-
-
     </style>
 </head>
 <body>
@@ -280,7 +139,7 @@
                     <li>18:45 – 19:00 - 搭乘HEARTS AIRPORT BUS</li>
                     <li>19:00 – 19:25 - 搭乘西鐵巴士</li>
                     <li>19:30 - 博多車站天座飯店 Check-in</li>
-                    <li>20:00 - 晚餐：麵屋兼虎、Shin-Shin博多拉麵</li>
+                    <li>20:00 - 晚餐：麵屋兼虎（沾麵）、Shin-Shin博多拉麵</li>
                     <li>21:00 - 回到博多車站天座飯店</li>
                 </ul>
 
@@ -371,10 +230,33 @@
                 [
                     { id: 5, name: '博多車站天座飯店', startTime: '08:00', note: '早餐 & Check-out' },
                     { id: 6, name: '太宰府天滿宮', startTime: '10:00' },
-                    { id: 7, name: '秋月城跡', startTime: '13:00' },
-                    { id: 8, name: '由布院飯店秀峰館', startTime: '17:30', note: 'Check-in' }
+                    { id: 7, name: '太宰府前表参道', startTime: '10:30' },
+                    { id: 8, name: '秋月城跡', startTime: '13:00' },
+                    { id: 9, name: '別府纜車', startTime: '15:45' },
+                    { id: 10, name: '由布院飯店秀峰館', startTime: '17:30', note: 'Check-in' }
                 ],
-                // Day 3, 4, 5 的行程資料...
+                [
+                    { id: 11, name: '由布院飯店秀峰館', startTime: '08:30' },
+                    { id: 12, name: '湯布院千家：早餐', startTime: '09:00' },
+                    { id: 13, name: '湯布院花卉村', startTime: '10:30' },
+                    { id: 14, name: '金鱗湖', startTime: '12:00' },
+                    { id: 15, name: '湯之坪街道', startTime: '14:00' },
+                    { id: 16, name: '由布釜飯心 湯布院站前店：晚餐', startTime: '17:30' }
+                ],
+                [
+                    { id: 17, name: '由布院飯店秀峰館 Check-out', startTime: '08:00' },
+                    { id: 18, name: '由布院站', startTime: '08:50' },
+                    { id: 19, name: '博多車站取行李', startTime: '11:30' },
+                    { id: 20, name: '藍瓶咖啡', startTime: '12:30' },
+                    { id: 21, name: 'THE BLOSSOM HAKATA Premier Check-in', startTime: '20:00' }
+                ],
+                [
+                    { id: 22, name: 'THE BLOSSOM HAKATA Premier 早餐 & Check-out', startTime: '08:00' },
+                    { id: 23, name: 'Fuk Coffee', startTime: '10:00' },
+                    { id: 24, name: '櫛田神社', startTime: '11:30' },
+                    { id: 25, name: 'HEARTS AIRPORT BUS', startTime: '16:30' },
+                    { id: 26, name: '回到桃園機場', startTime: '20:50' }
+                ],
             ]);
 
             const currentItinerary = computed(() => {

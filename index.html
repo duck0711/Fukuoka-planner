@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Family Trip to Fukuoka 2026</title>
+    <title>Trip to Fukuoka 2026</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -96,6 +96,146 @@
             position: relative;
             z-index: 5;
         }
+
+       
+
+        /* 隱藏捲軸但保持滑動功能 */
+
+        .hide-scrollbar::-webkit-scrollbar {
+
+            display: none;
+
+        }
+
+        .hide-scrollbar {
+
+            -ms-overflow-style: none;
+
+            scrollbar-width: none; 
+
+        }
+
+
+
+        /* 卡片柔和陰影 */
+
+        .card-shadow {
+
+            box-shadow: 0 4px 20px rgba(179, 229, 252, 0.3);
+
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        }
+
+
+
+        /* 頁面淡入動畫 */
+
+        .animate-fade-in {
+
+            animation: fadeIn 0.4s ease-out;
+
+        }
+
+
+
+        @keyframes fadeIn {
+
+            from { opacity: 0; transform: translateY(10px); }
+
+            to { opacity: 1; transform: translateY(0); }
+
+        }
+
+
+
+        /* 自定義浮動按鈕陰影 */
+
+        .fab-shadow {
+
+            box-shadow: 0 4px 15px rgba(255, 213, 79, 0.5);
+
+        }
+
+
+
+        /* 備註內容高度控制 */
+
+        .note-content {
+
+            max-height: 2.5rem;
+
+            overflow: hidden;
+
+            transition: max-height 0.3s ease-out;
+
+        }
+
+
+
+        .note-content.expanded {
+
+            max-height: 500px;
+
+        }
+
+        
+
+        /* 支出圓形分類標籤 */
+
+        .expense-category-tag {
+
+            min-width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            flex-shrink: 0;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+
+        /* 花費頁 Banner 顏色調整 */
+
+        .expenses-banner {
+
+            background: linear-gradient(135deg, #01579B 0%, #0097A7 100%);
+
+        }
+
+        
+
+        /* 日期選單置頂的背景 */
+
+        .date-selector-sticky {
+
+             /* 讓日期選單置頂在 Banner 下方，並給予白色背景 */
+
+            background-color: #ffffff;
+
+            border-bottom: 1px solid #f0f0f0; 
+
+            z-index: 20; 
+
+            top: 0; 
+
+        }
+
+
     </style>
 </head>
 <body>
